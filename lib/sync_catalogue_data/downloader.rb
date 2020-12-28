@@ -1,6 +1,7 @@
 require 'open-uri'
 require 'fileutils'
 
+# TODO: We can make a separate downloder for each data.
 module SyncCatalogueData
   class Downloader
     POPULATION_STATISTICS_DATA_URL = "https://catalogue.data.gov.bc.ca/dataset/ecc0b2fe-1287-46fd-8fc1-29dad621c0ce/resource/1665c496-7e16-487a-bb6a-54f05d166bc7/download/2016_census_profiles_by_health_region.csv".freeze

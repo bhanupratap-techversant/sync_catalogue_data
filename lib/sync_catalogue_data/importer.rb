@@ -1,5 +1,7 @@
 require 'csv'
 
+# TODO: We can make a separate importer for each model.
+# TODO: File should be deleted after completing the import process.
 module SyncCatalogueData
   class Importer
     class << self
@@ -52,6 +54,10 @@ module SyncCatalogueData
           m_20092010: data["M_20092010"],
           f_20092010: data["F_20092010"],
         }
+      end
+
+      def clear_existing_data_for(model)
+        model.destroy_all
       end
 
       def read_csv(file_path)
