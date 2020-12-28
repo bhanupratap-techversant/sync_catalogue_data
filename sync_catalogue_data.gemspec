@@ -3,11 +3,11 @@ require_relative 'lib/sync_catalogue_data/version'
 Gem::Specification.new do |spec|
   spec.name          = "sync_catalogue_data"
   spec.version       = SyncCatalogueData::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["Bhanu Pratap Singh"]
+  spec.email         = ["bhanupratap@techversantinfo.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{sync_catalogue_data is the service to sync catalogue data.}
+  spec.description   = %q{Import the catalogue data from government authorized sites in British Columbia.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
