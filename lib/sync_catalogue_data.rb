@@ -1,18 +1,12 @@
 require "sync_catalogue_data/version"
 require "sync_catalogue_data/downloader"
+require "sync_catalogue_data/importer"
 
 module SyncCatalogueData
-  class Download
-    def self.population_data
-      SyncCatalogueData::Downloader.download_population_data
-    end
-
-    def self.health_services_data
-      SyncCatalogueData::Downloader.download_health_services_data
-    end
-
-    def self.all
-      SyncCatalogueData::Downloader.download_all
+  class Importer
+    def self.call(options={})
+      SyncCatalogueData::Importer.import_population_statistic_data(options)
+      SyncCatalogueData::Importer.import_health_services_data(options)
     end
   end
 end
