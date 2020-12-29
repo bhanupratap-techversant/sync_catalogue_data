@@ -37,22 +37,22 @@ module SyncCatalogueData
 
       def population_statistic_attributes(data)
         {
-          dimension: data["﻿Dimension "],
-          ha1_interior: data["HA 1 Interior"],
-          ha2_fraser: data["HA 2 Fraser"],
-          ha3_vancouver_caustal: data["HA 3 Vancouver Coastal"],
-          ha4_vancouver_island: data["HA 4 Vancouver Island"],
-          ha5_northern: data["HA 5 Northern"],
+          dimension: data["﻿Dimension "].to_s.strip,
+          ha1_interior: data["HA 1 Interior"].to_s.strip,
+          ha2_fraser: data["HA 2 Fraser"].to_s.strip,
+          ha3_vancouver_caustal: data["HA 3 Vancouver Coastal"].to_s.strip,
+          ha4_vancouver_island: data["HA 4 Vancouver Island"].to_s.strip,
+          ha5_northern: data["HA 5 Northern"].to_s.strip,
         }
       end
 
       def health_service_attributes(data)
         {
-          ha: data["HA"],
-          service: data["SERVICE"],
-          service_type: data["SERVICE_TYPE"],
-          m_20092010: data["M_20092010"],
-          f_20092010: data["F_20092010"],
+          ha: data["HA"].to_s.strip,
+          service: data["SERVICE"].to_s.strip,
+          service_type: data["SERVICE_TYPE"].to_s.strip,
+          m_20092010: data["M_20092010"].to_s.strip,
+          f_20092010: data["F_20092010"].to_s.strip,
         }
       end
 
