@@ -1,8 +1,14 @@
 # SyncCatalogueData
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sync_catalogue_data`. To experiment with that code, run `bin/console` for an interactive prompt.
+SyncCatalogueData is used to fetch data from below government authorized websites and import in your database.
 
-TODO: Delete this and the text above, and describe your gem
+1.
+Population Statistics for British Columbia
+(https://catalogue.data.gov.bc.ca/dataset/2016-census-semi-custom-profile-health-regions-of-british-columbia/resource/1665c496-7e16-487a-bb6a-54f05d166bc7)
+
+2.
+Health Services Expenditure for British Columbia
+(https://catalogue.data.gov.bc.ca/dataset/bc-health-services-patient-counts-and-expenditures-by-gender-health-service-delivery-area-and-fiscal/resource/b8fea73b-cb28-43aa-ab22-ce52e80f9941)
 
 ## Installation
 
@@ -22,7 +28,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To download the CSV files from government sites
+```ruby
+SyncCatalogueData::Downloader.download_population_data
+SyncCatalogueData::Downloader.download_health_services_data
+```
+
+To download the CSV files from government sites and import in your DB.
+```ruby
+SyncCatalogueData.Importer.call
+
+```
+To delete existing records before importing the downloaded file.
+```ruby
+SyncCatalogueData.Importer.call(clear_existing_data: true)
+```
 
 ## Development
 
