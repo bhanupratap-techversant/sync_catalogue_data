@@ -10,6 +10,7 @@ module SyncCatalogueData
         csv.each do |row|
           create_record(::HealthService, row)
         end
+        File.delete(file_path)
       end
 
       private
