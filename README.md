@@ -36,12 +36,12 @@ SyncCatalogueData::Downloaders::HealthService.new.call
 
 To download the CSV files from government sites and import in your DB.
 ```ruby
-SyncCatalogueData.Importer.call
+SyncCatalogueData::Importer.call
 
 ```
 To delete existing records before importing the downloaded file.
 ```ruby
-SyncCatalogueData.Importer.call(clear_existing_data: true)
+SyncCatalogueData::Importer.call(clear_existing_data: true)
 ```
 
 ## Development
