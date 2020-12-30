@@ -1,5 +1,7 @@
 require "bundler/setup"
 require 'byebug'
+require "ostruct"
+require 'csv'
 require "sync_catalogue_data"
 
 RSpec.configure do |config|
