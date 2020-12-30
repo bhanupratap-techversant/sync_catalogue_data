@@ -30,8 +30,8 @@ Or install it yourself as:
 
 To download the CSV files from government sites
 ```ruby
-SyncCatalogueData::Downloader.download_population_data
-SyncCatalogueData::Downloader.download_health_services_data
+SyncCatalogueData::Downloaders::PopulationStatistic.new.call
+SyncCatalogueData::Downloaders::HealthService.new.call
 ```
 
 To download the CSV files from government sites and import in your DB.
